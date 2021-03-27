@@ -3,7 +3,7 @@ title: Papers
 category: Devices
 order: 1
 ---
-@[toc]
+[toc]
 [固件下载](https://www.cnblogs.com/from-zero/p/12355492.html)
 [固件逆向](http://blog.binpang.me/2018/07/10/firmware-reverse/)
 [固件逆向](https://www.jianshu.com/p/66dcf89beb7f)
