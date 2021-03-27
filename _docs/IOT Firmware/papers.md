@@ -1,6 +1,6 @@
 ---
 title: Papers
-category: Devices
+category: IOT Firmware
 order: 1
 ---
 - [Identifying Privilege Separation Vulnerabilities in IoT Firmware with Symbolic Execution](#identifying-privilege-separation-vulnerabilities-in-iot-firmware-with-symbolic-execution)
@@ -38,7 +38,7 @@ order: 1
 - [算法入门简介](#------)
   * [污点分析](#----)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 [固件下载](https://www.cnblogs.com/from-zero/p/12355492.html)
