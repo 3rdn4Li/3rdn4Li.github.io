@@ -226,6 +226,36 @@ fuzz已训练好的模型哪儿薄弱，感觉和对抗有点联系。
 在计算距离时，把激活投影到最重要的方向上，只考虑这些方向。
 
 ## 2019 S&P:NEUZZ: Efficient Fuzzing with Neural Program Smoothing
+[github](http://github.com/dongdongshe/neuzz)
+作者认为，漏洞挖掘本身是个优化问题，其目标是找到在给定的测试时间内最大化漏洞数量的程序输入。但因为安全漏洞往往稀疏且不规则地分布在程序中，目标函数非凸，有很多突变处，因此没法用梯度引导的优化。
+
+神经网络本身是个连续且可导的线性函数(of class C1)，这篇文章关键点在于用神经网络拟合非class C1函数，并在神经网络上应用梯度搜索。样本是程序输入，标签是ground truth, 应该是从内存里掏出来的运行时关键值。这篇文章专注于将分支行为作为ground truth，因此是bool的。定义损失函数如下，含义是预测值和ground truth的差距。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210327173929507.png)
+缓解多重共线性(multicollinearity)：各标签可能存在强相关性。由训练数据执行的边缘覆盖通常是有偏差的，因为它只包含程序中所有边缘的一小部分的标签。为了避免这种情况，作者遵循降维的常见机器学习实践，将训练数据中总是一起出现的边合并成一条边。此外，作者只考虑在训练数据中至少被激活一次的边缘。这些步骤将标签数量从平均约65536个显著减少到约4000个。
+
+梯度搜索：在作者的设置中，基于梯度的引导的目标是找到将对应于不同边缘的最终层神经元的输出从0改变为1的输入。
+
+增量学习: 在有新数据时，将新数据中可以获得新边缘覆盖的数据加入到旧训练数据中再训练。
+
+仨全连接，层之间relu，输出层sigmoid，50 epoch，95%准确率。
+
+### 实验
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210327231159842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTE3MzgyNTc=,size_16,color_FFFFFF,t_70)
+算法1显示了我们的梯度引导输入生成过程的轮廓。关键思想是识别具有最高梯度值的输入字节，并对它们进行变异，因为它们对神经网络指示更高的重要性，从而更有可能导致程序行为的重大变化(例如，翻转分支)。从一个种子开始，我们迭代地生成新的测试输入。如算法1所示，在每次迭代中，我们首先利用梯度的绝对值来识别输入字节，该输入字节将导致输出神经元中对应于未捕获边缘的最大变化。接下来，我们检查每个字节的梯度符号，以决定突变的方向(例如，增加或减少它们的值)，从而最大化/最小化目标函数。从概念上讲，我们对梯度符号的使用类似于对抗性输入生成方法。我们还将每个字节的突变绑定在其合法范围内(0-255)。第6行和第10行表示使用裁剪函数来实现这种边界。我们从一个小的变异目标(算法1中的k)开始输入生成过程，并指数增长要变异的目标字节数，以有效覆盖大的输入空间。
+应该是每个变异只改一个字节?这个字节随梯度步进1到255个值。
+还讨论了一下单隐藏层和多隐藏层的模型表现，水话而且只比较了三隐层和单隐层。
+
+选了10个程序，每个在AFL上跑1小时，平均2000个输入，5:1分训练集测试集。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210328000706111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTE3MzgyNTc=,size_16,color_FFFFFF,t_70)
+如图2所示，NEUZZ迭代运行以生成1M突变，并逐步重新训练神经网络模型。我们首先使用算法1中描述的突变算法来生成1M突变。我们将参数i设置为10，这为种子输入生成了5120个突变输入。接下来，我们随机选择100个输出神经元，代表目标程序中100个未探索的边，并从两个种子中生成10240个突变输入。最后，我们使用AFL的分叉服务器技术[54]用1M突变输入执行目标程序，并使用覆盖新边的任何输入进行增量再训练。
+
+为了检测不一定会导致崩溃的内存错误，我们用[AddressSanitizer](https://github.com/google/sanitizers)编译程序二进制文件。我们通过比较AddressSanitizer报告的堆栈跟踪来测量发现的独特内存错误。对于不会导致AddressSanitizer生成错误报告的崩溃，我们检查执行跟踪。整数溢出错误是通过手动分析触发无限循环的输入发现的。我们使用[UndefinedBehaviorSanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)进一步验证整数溢出错误。
+
+其中用了[LAVA-M数据集](https://sites.google.com/site/steelix2017/home/lava)，作者写LAVA-M触发漏洞需要一个4byte的magic number，讲先跑AFL一小时生成训练集，然后找梯度最大byte，之后变异它和它周围三字节。1）那么怎么算梯度？2）变异单字节可以触发漏洞？否则还是256的4次方。
+Fuzz对magic bytes只能试啊，能不能和symbolic execution结合？因为真实世界程序对magic bytes的检查往往是1）哈希/加解密校验（这个如果能判断可以直接放弃）2）分支条件（这个往往是未经复杂处理的用户输入，比如只经过parse），其实可以解对应输入满足的要求。
+
+**这有个RNN引导的fuzz:**
+Rajpal, M., Blum, W., & Singh, R. (2017). Not all bytes are equal: Neural byte sieve for fuzzing. arXiv preprint arXiv:1711.04596.
 
 
 
@@ -266,8 +296,6 @@ fuzz已训练好的模型哪儿薄弱，感觉和对抗有点联系。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210325113023385.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTE3MzgyNTc=,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210325113034391.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTE3MzgyNTc=,size_16,color_FFFFFF,t_70)
-
-
 
 
 
