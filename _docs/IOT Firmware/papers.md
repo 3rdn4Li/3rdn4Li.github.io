@@ -268,7 +268,52 @@ Fuzz对magic bytes只能试啊，能不能和symbolic execution结合？因为�
 
 Rajpal, M., Blum, W., & Singh, R. (2017). Not all bytes are equal: Neural byte sieve for fuzzing. arXiv preprint arXiv:1711.04596.
 
+## NDSS20 DEEPBINDIFF: Learning Program-Wide Code Representations for Binary Diffing
 
+[github](https://github.com/deepbindiff/DeepBinDiff)
+
+这个是做二进制差分。旨在定量测量两个给定二进制码之间的相似性，并产生细粒度的基本块级匹配。它不仅给出了关于整个二进制规模的差异的精确、细粒度和定量的结果，而且明确揭示了代码如何在不同版本或优化级别之间演变。
+
+突破在于①之前没有机器学习的算法可以在基本块级别的细粒度上执行有效的程序范围的二进制区分。②之前没有一种基于学习的技术在分析过程中同时考虑程序范围的依赖信息和基本块语义信息。③无监督学习。
+
+参考文献不少，可以看看。
+
+当前工作主要有：
+
+传统方法，包括：
+
+1）静态分析：控制流图、数据流图匹配。缺点是只考虑指令的语法，而不考虑语义，而且一些图匹配算法消耗大。
+
+2）动态分析：二进制文件切片或污染。缺点是扩展性较差，代码覆盖率较低。
+
+机器学习方法：
+
+图表示学习技术、代码信息嵌入(embedding，即高维数值向量)、NLP。
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210331092216999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTE3MzgyNTc=,size_16,color_FFFFFF,t_70)
+
+### 流程
+
+
+**预处理**
+
+1)CFG生成: IDA
+
+2)特征向量生成：魔改word2vec,造了个token embedding模型，包括：
+
+随机漫步：依靠控制流图，五个基本块。这个相当于word2vec里的句子。
+
+标准化：用特定字符串替换变量名、指针、buffer。
+
+用Bag-of-Words(CBOW)方法训练出个token embedding模型。
+
+每个指令包含一个opcode embedding和多个operand embedding，作者用operand embedding平均值和opcode embedding连接，生成指令embedding，然后加在一起生成block feature embedding。
+
+用了个TF-IDF模型，来区分重要的操作和不重要的。
+
+3）Text-associated DeepWalk训练模型：
+
+合并两个图，将外部库调用和系统调用表示为虚节点来联系两个图。
 
 
 
