@@ -11,9 +11,9 @@ My research interests primarily focus on **AI for Security (AI4Sec)**, including
 
 #### Publications
 
-FS-IDS: A framework for intrusion detection based on few-shot learning
+[FS-IDS: A framework for intrusion detection based on few-shot learning](https://www.sciencedirect.com/science/article/pii/S0167404822002929)
 
-BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning
+[BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning](https://dl.acm.org/doi/abs/10.1145/3643659.3648563)
 
 #### Contact Info
 📧 Email: [hongwei@example.com](mailto:lihongweiandre@gmail.com)  
