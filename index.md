@@ -1,38 +1,20 @@
 ---
-title: Welcome
+title: 3rdn4
 ---
+![Image description](/images/example.jpg)
 
-This is the **Edition** template from [CloudCannon](http://cloudcannon.com/).
-**Edition** is perfect for documenting your product, application or service.
-It's populated with example content to give you some ideas.
+I am **Hongwei Li**, a Ph.D. student at **UCSB**, working with [Dr. Wenbo Guo](https://cs.ucsb.edu/people/faculty/wenbo-guo). I am a member of [Shellphish](http://shellphish.net/) and a core member of [ARTIPHISHELL](https://shellphish.net/aixcc/index.html). 
 
-ChatApp is a fictional chat application for sending messages and media to others.
-Teams and friend groups would use ChatApp to stay up to date if it existed.
+My research interests primarily focus on **AI for Security (AI4Sec)**, including:
+- Using **reinforcement learning** to assist **collaborative fuzzing**.
+- Leveraging **large language models (LLMs)** for **automatic patching**.
 
-> [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
+#### Publications
 
-### Getting Started
+FS-IDS: A framework for intrusion detection based on few-shot learning
 
-Getting a message sent is quick and easy with ChatApp:
+BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning
 
-1. Sign up for an account
-2. Add your friends from their email addresses
-3. Type a message or send a photo
-
-> Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
-
-### Features
-
-Explore more of ChatApp by reading about our features:
-
-#### Media
-
-Send images, videos and other media to people. Sources include your computer, phone and Facebook.
-
-#### Contact Syncing
-
-Sync your contact list with your phone and/or Facebook contacts. Never lose your contacts between devices again!
-
-#### Devices
-
-ChatApp is available everywhere. Find out how to set it up on your all your devices.
+#### Contact Info
+📧 Email: [hongwei@example.com](mailto:lihongweiandre@gmail.com)  
+🐙 GitHub: [github.com/hongwei-li](https://github.com/3rdn4Li/)  
