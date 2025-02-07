@@ -16,5 +16,5 @@ My research interests primarily focus on **AI for Security (AI4Sec)**, including
 [BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning](https://dl.acm.org/doi/abs/10.1145/3643659.3648563)
 
 #### Contact Info
-📧 Email: [hongwei@example.com](mailto:lihongweiandre@gmail.com)  
-🐙 GitHub: [github.com/hongwei-li](https://github.com/3rdn4Li/)  
+📧 Email: [lihongweiandre@gmail.com](mailto:lihongweiandre@gmail.com)  
+🐙 GitHub: [https://github.com/3rdn4Li/](https://github.com/3rdn4Li/)  
