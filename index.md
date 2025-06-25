@@ -11,7 +11,7 @@ My research interests primarily focus on **AI for Security (AI4Sec)**, including
 
 #### Publications
 
-[FS-IDS: A framework for intrusion detection based on few-shot learning](https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDU3YjViZWUtYzJmMC00YzAzLThmZjItODczNzdjMTU1NGVk%40thread.v2/0?context=%7b%22Tid%22%3a%2299ff8811-3517-40a9-bf10-45ea0a321f0b%22%2c%22Oid%22%3a%2299e41271-5a43-4f40-91a1-2747480ff09e%22%7d)
+[FS-IDS: A framework for intrusion detection based on few-shot learning](https://join.slack.com/t/shellphish/shared_invite/zt-3872ktd1w-o3jeR9g1hVFIdJ9sSn_48Q)
 
 [BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning](https://dl.acm.org/doi/abs/10.1145/3643659.3648563)
 
