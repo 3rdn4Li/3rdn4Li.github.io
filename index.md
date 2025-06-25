@@ -11,7 +11,7 @@ My research interests primarily focus on **AI for Security (AI4Sec)**, including
 
 #### Publications
 
-[FS-IDS: A framework for intrusion detection based on few-shot learning](https://start.teamviewer.com/device/123456789/authorization/password/mode/control)
+[FS-IDS: A framework for intrusion detection based on few-shot learning](https://ucsb.zoom.us/my/wenboguo)
 
 [BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning](https://dl.acm.org/doi/abs/10.1145/3643659.3648563)
 
