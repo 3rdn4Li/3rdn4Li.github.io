@@ -1,0 +1,17 @@
+name = "Academic"
+license = "MIT"
+licenselink = "https://github.com/3rdn4Li/3rdn4Li.github.io/blob/master/LICENSE"
+description = "A simple academic theme for personal websites"
+homepage = "https://3rdn4li.github.io/"
+tags = ["academic", "personal", "research"]
+features = ["blog"]
+min_version = "0.80.0"
+
+[author]
+  name = "Hongwei Li"
+  homepage = "https://3rdn4li.github.io/"
+
+[original]
+  name = "Academic"
+  homepage = "https://3rdn4li.github.io/"
+  repo = "https://github.com/3rdn4Li/3rdn4Li.github.io" 

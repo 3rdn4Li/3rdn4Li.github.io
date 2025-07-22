@@ -1,0 +1,152 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Hongwei Li</h1>
+        <p class="lead mb-4">Ph.D. Student at UC Santa Barbara</p>
+        <p class="mb-4">AI for Security (AI4Sec) Researcher</p>
+        <div class="social-links">
+            <a href="mailto:lihongweiandre@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/3rdn4Li" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=TODhN38AAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-5">About Me</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="lead">I am a Ph.D. student at the University of California, Santa Barbara, working under the supervision of Dr. Wenbo Guo. I am a member of <a href="https://shellphish.net/" target="_blank">Shellphish</a>, a renowned cybersecurity research group, and a core member of the <a href="https://support.shellphish.net/aixcc/team/" target="_blank">ARTIPHISHELL</a> team that competed in the DARPA AI Cyber Challenge (AIxCC).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Section -->
+<section class="section bg-light" id="research">
+    <div class="container">
+        <h2 class="text-center mb-5">Research Interests</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">AI for Security (AI4Sec)</h5>
+                        <p class="card-text">Developing AI-driven approaches to improve cybersecurity effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Reinforcement Learning for Fuzzing</h5>
+                        <p class="card-text">Using reinforcement learning to assist collaborative fuzzing techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">LLMs for Automatic Patching</h5>
+                        <p class="card-text">Leveraging large language models to automatically generate and apply security patches.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Software Security</h5>
+                        <p class="card-text">Vulnerability detection, analysis, and remediation techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Awards Section -->
+<section class="section" id="awards">
+    <div class="container">
+        <h2 class="text-center mb-5">Awards</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-trophy text-warning"></i> DARPA AIxCC Finalist (Top 7)</h5>
+                        <p class="card-text">Core member of the ARTIPHISHELL team that advanced to the finals of the DARPA AI Cyber Challenge (AIxCC). Team won $2 million in semifinal competition.</p>
+                        
+                        <h6 class="mt-3 mb-2"><i class="fas fa-tasks text-info"></i> My Role & Contributions:</h6>
+                        <p class="card-text">During the early stages, I served as a core member of the patching team, focusing on automated vulnerability patching. As the competition progressed to the final phase, my responsibilities expanded to include custom model fine-tuning for vulnerability detection, contributing to the development of the root cause analysis engine kumu-shi, and supporting the maintenance of our patching tool named PatcherY.</p>
+                        
+                        <a href="https://engineering.ucsb.edu/news/success-darpa-cyberdefense-competition-nets-team-trip-finals-and-2-million" target="_blank" class="btn btn-primary btn-sm">Read More</a>
+                        <a href="https://www.washingtonpost.com/technology/2024/07/27/pentagon-cybersecurity-ai-hackathon-darpa-challenge/" target="_blank" class="btn btn-outline-secondary btn-sm">Washington Post Coverage</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-medal text-warning"></i> First Place in SBFT 2024 Fuzzing Competition</h5>
+                        <p class="card-text">BandFuzz won the SBFT 2024 Fuzzing Competition, which uses mutation testing as the ranking metric. Our framework achieved the best performance across all evaluation metrics among all competing teams, including the highest number of mutant kills, the highest average mutation score, and the highest coverage of mutants.</p>
+                        
+                        <div class="btn-group" role="group">
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3643659.3643933?casa_token=rH-6gmYwiLAAAAAA:b-QPeDYd2wCsi1c1-kr-ekzkBCW6fU2ndcyylNXQUtyxdUaJGriQyvLo80gr-6Sw_Fsw3gy8Op71dDI" target="_blank" class="btn btn-outline-info btn-sm">Competition Summary</a>
+                            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#sbftCertificate" aria-expanded="false" aria-controls="sbftCertificate">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </button>
+                        </div>
+                        
+                        <!-- Certificate Image (Collapsible) -->
+                        <div class="collapse mt-3" id="sbftCertificate">
+                            <div class="card card-body bg-light">
+                                <div class="text-center">
+                                    <img src="/images/certificates/sbft-2024-certificate.png" alt="SBFT 2024 First Place Certificate" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                    <p class="text-muted mt-2"><small>Click image to view full size</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications Section -->
+<section class="section bg-light" id="publications">
+    <div class="container">
+        <h2 class="text-center mb-5">Selected Publications</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">PatchPilot: A Cost-Efficient Software Engineering Agent with Early Attempts on Formal Verification</h5>
+                        <p class="card-text"><strong>ICML 2025</strong></p>
+                        <p class="card-text">A novel approach to automated software patching using AI agents with formal verification capabilities.</p>
+                        <a href="https://arxiv.org/abs/2502.02747" target="_blank" class="btn btn-outline-primary btn-sm">View Paper</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning</h5>
+                        <p class="card-text"><strong>ICSE/SBFT 2024</strong> (Workshop Paper)</p>
+                        <p class="card-text">A practical framework that leverages reinforcement learning to improve collaborative fuzzing effectiveness.</p>
+                        <div class="btn-group" role="group">
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3643659.3648563" target="_blank" class="btn btn-outline-primary btn-sm">Workshop Paper (SBFT)</a>
+                            <a href="https://arxiv.org/abs/2507.10845" target="_blank" class="btn btn-outline-secondary btn-sm">Long Paper (arXiv)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }} 

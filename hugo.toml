@@ -1,0 +1,4 @@
+baseURL = 'https://3rdn4li.github.io/'
+languageCode = 'en-us'
+title = 'Hongwei Li - Academic Website'
+theme = 'academic'

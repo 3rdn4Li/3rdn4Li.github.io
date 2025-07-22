@@ -1,0 +1,16 @@
+############################
+## HUGO MODULES
+## Simple configuration without external modules
+############################
+
+# No external modules
+imports: []
+
+# Basic mounts
+mounts:
+  - source: layouts
+    target: layouts
+  - source: assets
+    target: assets
+  - source: static
+    target: static
