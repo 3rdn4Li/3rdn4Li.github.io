@@ -82,3 +82,4 @@ Edit files in `config/_default/` to customize:
 ## License
 
 This website is built with the [Wowchemy](https://wowchemy.com/) theme for Hugo.
+# Force Hugo deployment
