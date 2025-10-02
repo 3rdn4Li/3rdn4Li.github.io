@@ -1,1 +1,6 @@
 User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://3rdn4li.github.io/sitemap.xml
+
