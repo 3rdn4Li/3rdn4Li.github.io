@@ -1,5 +1,6 @@
 ---
 title: 'Experience'
+description: 'Professional experience and academic background of Hongwei Li - Ph.D. student at UC Santa Barbara, DARPA AIxCC finalist, and cybersecurity researcher.'
 date: 2023-10-24
 type: landing
 

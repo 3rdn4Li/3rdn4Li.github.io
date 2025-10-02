@@ -1,6 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ""
+description: "Hongwei Li - Ph.D. student at UC Santa Barbara researching AI for Security (AI4Sec). Member of Shellphish and DARPA AIxCC finalist. Research in cybersecurity, software engineering, and program analysis."
 date: 2022-10-24
 type: landing
 

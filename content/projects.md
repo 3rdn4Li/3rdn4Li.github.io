@@ -1,5 +1,6 @@
 ---
 title: 'Projects'
+description: 'Research projects by Hongwei Li including PatchPilot, BandFuzz, and work on automated vulnerability patching, fuzzing, and AI for security.'
 date: 2024-05-19
 type: landing
 
