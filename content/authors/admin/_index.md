@@ -2,6 +2,9 @@
 # Display name
 title: Hongwei Li
 
+# Meta description for SEO
+description: "Hongwei Li - Ph.D. student at UC Santa Barbara researching AI for Security. Member of Shellphish, DARPA AIxCC finalist. Research in reinforcement learning for fuzzing, LLMs for automatic patching, and software security."
+
 # Name pronunciation (optional)
 name_pronunciation: Hong-wei Li
 
