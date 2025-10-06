@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
     
     {{/* SEO Meta Tags */}}
     {{ if .Description }}
@@ -17,7 +17,7 @@
     {{ end }}
     
     {{/* Open Graph / Social Media Meta Tags */}}
-    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="og:title" content="{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
     {{ if .Description }}
     <meta property="og:description" content="{{ .Description }}">
     {{ end }}
