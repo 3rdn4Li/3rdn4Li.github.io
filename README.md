@@ -1,4 +1,4 @@
-# Hongwei Li - Academic Website
+# Hongwei Li(李洪伟) - Academic Website
 
 This is my personal academic website built with Hugo and the Wowchemy theme.
 
