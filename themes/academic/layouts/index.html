@@ -2,13 +2,6 @@
 <!-- Hero Section -->
 <section class="hero">
     <div class="container text-center position-relative">
-        <!-- CV Button in top-right corner -->
-        <div class="position-absolute top-0 end-0">
-            <a href="/files/cv_lihongwei.pdf" title="Download CV" target="_blank" class="btn btn-outline-primary btn-sm">
-                <i class="fas fa-file-pdf me-1"></i>Download CV
-            </a>
-        </div>
-        
         <h1 class="display-4 mb-4">Hongwei Li(李洪伟)</h1>
         <p class="lead mb-4">Ph.D. Student at UC Santa Barbara</p>
         <p class="mb-4">AI for Security (AI4Sec) Researcher</p>
@@ -25,7 +18,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="text-center mb-5">About Me</h2>
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <h2 class="mb-0">About Me</h2>
+                    <a href="/files/cv_lihongwei.pdf" title="Download CV" target="_blank" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-file-pdf me-1"></i>Download CV
+                    </a>
+                </div>
                 <div class="card">
                     <div class="card-body">
                         <p class="lead">I am a Ph.D. student at the University of California, Santa Barbara, working under the supervision of <a href="https://henrygwb.github.io/" target="_blank">Dr. Wenbo Guo</a>. I am a member of <a href="https://shellphish.net/" target="_blank">Shellphish</a>, a renowned cybersecurity research group, and a core member of the <a href="https://support.shellphish.net/aixcc/team/" target="_blank">ARTIPHISHELL</a> team that competed in the <a herf="https://aicyberchallenge.com/" target="_blank">DARPA AI Cyber Challenge (AIxCC)</a>.</p>
@@ -231,59 +229,95 @@
 <!-- Publications Section -->
 <section class="section bg-light" id="publications">
     <div class="container">
-        <h2 class="text-center mb-5">Selected Publications</h2>
+        <h2 class="text-center mb-5">Publications</h2>
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models</h5>
-                        <p class="card-text"><strong>NeurIPS 2025</strong></p>
-                        <p class="card-text">A collaborative patching system with small and specialized reasoning models for individual components, achieving 46% resolved rate on SWE-bench-Verified with only 3 x 14B models.</p>
-                        <p class="card-text"><small class="text-muted">Y Tang, <strong>H Li</strong>, K Zhu, M Yang, Y Ding, W Guo</small></p>
-                        <a href="https://arxiv.org/abs/2505.18955" target="_blank" class="btn btn-outline-primary btn-sm">View Paper</a>
+                        <h5 class="card-title">LLM post-training and agents</h5>
+                        <ol class="mb-0">
+                            <li>
+                                Yuzhou Nie, <strong>Hongwei Li</strong>, Ruizhe Jiang, Chengquan Guo,
+                                Zhun Wang, Bo Li, Dawn Song, Wenbo Guo,
+                                “VulnLLM-R: Specialized Reasoning LLM with Agent Scaffold for
+                                Vulnerability Detection”, Submitted to
+                                The 47th IEEE Symposium on Security and Privacy,
+                                Rio de Janeiro, Brazil, 2026.
+                            </li>
+                            <li>
+                                Shellphish, “An AI-powered Cyber Reasoning System for Automatic
+                                Vulnerability Identification and Patching”, Submitted to
+                                Phrack Papers, 2026.
+                            </li>
+                            <li>
+                                Yuheng Tang, Kaijie Zhu, Bonan Ruan, Chuqi Zhang, Michael Yang,
+                                <strong>Hongwei Li</strong>, Suyue Guo, Tianneng Shi, Zekun Li,
+                                Christopher Kruegel, Giovanni Vigna, Dawn Song,
+                                William Yang Wang, Lun Wang, Yangruibo Ding, Zhenkai Liang,
+                                Wenbo Guo, “DevOps-Gym: Benchmarking AI Agents in Software
+                                DevOps Cycle”, Submitted to
+                                The 14th International Conference on Learning Representations,
+                                2026.
+                            </li>
+                            <li>
+                                Tianneng Shi, Jingxuan He, Zhun Wang, Linyu Wu,
+                                <strong>Hongwei Li</strong>, Wenbo Guo, Dawn Song,
+                                “Progent: Programmable Privilege Control for LLM Agents”,
+                                Submitted to The 47th IEEE Symposium on Security and Privacy,
+                                Rio de Janeiro, Brazil, 2026.
+                            </li>
+                            <li>
+                                Yujin Potter, Wenbo Guo, Zhun Wang, Tianneng Shi,
+                                <strong>Hongwei Li</strong>, Andy Zhang, Patrick Gage Kelley,
+                                Kurt Thomas, Dawn Song,
+                                “SoK: Frontier AI’s Impact on the Cybersecurity Landscape”,
+                                Submitted to The 47th IEEE Symposium on Security and Privacy,
+                                Rio de Janeiro, Brazil, 2026.
+                            </li>
+                            <li>
+                                [ICML’25] <strong>Hongwei Li</strong>, Yuheng Tang, Shiqi Wang,
+                                Wenbo Guo, “PatchPilot: A Verifiable and Cost-Efficient
+                                Agentic Patching Framework”, In Proceedings of
+                                The 42nd International Conference on Machine Learning,
+                                Vancouver, CA, 2025.
+                            </li>
+                            <li>
+                                [NeurIPS’25] Yuheng Tang, <strong>Hongwei Li</strong>,
+                                Kaijie Zhu, Michael Yang, Yangruibo Ding, Wenbo Guo,
+                                “Co-PatcheR: Collaborative Software Patching with
+                                Component-specific Small Reasoning Models”, In Proceedings of
+                                The 39th Conference on Neural Information Processing Systems,
+                                San Diego, CA, 2025.
+                            </li>
+                        </ol>
                     </div>
                 </div>
-                
+
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">PatchPilot: A Cost-Efficient Software Engineering Agent with Early Attempts on Formal Verification</h5>
-                        <p class="card-text"><strong>ICML 2025</strong></p>
-                        <p class="card-text">A novel approach to automated software patching using AI agents with formal verification capabilities.</p>
-                        <p class="card-text"><small class="text-muted"><strong>H Li</strong>, Y Tang, S Wang, W Guo</small></p>
-                        <a href="https://arxiv.org/abs/2502.02747" target="_blank" class="btn btn-outline-primary btn-sm">View Paper</a>
-                    </div>
-                </div>
-                
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">BandFuzz: A Practical Framework for Collaborative Fuzzing with Reinforcement Learning</h5>
-                        <p class="card-text"><strong>ICSE/SBFT 2024</strong> (Workshop Paper)</p>
-                        <p class="card-text">A practical framework that leverages reinforcement learning to improve collaborative fuzzing effectiveness.</p>
-                        <p class="card-text"><small class="text-muted">W Shi, <strong>H Li</strong>, J Yu, W Guo, X Xing</small></p>
-                        <div class="btn-group" role="group">
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3643659.3648563" target="_blank" class="btn btn-outline-primary btn-sm">Workshop Paper (SBFT)</a>
-                            <a href="https://arxiv.org/abs/2507.10845" target="_blank" class="btn btn-outline-secondary btn-sm">Long Paper (arXiv)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Progent: Programmable privilege control for LLM agents</h5>
-                        <p class="card-text"><strong>arXiv 2025</strong></p>
-                        <p class="card-text">The first privilege control mechanism for LLM agents, providing fine-grained constraints over tool calls to ensure security while preserving utility.</p>
-                        <p class="card-text"><small class="text-muted">T Shi, J He, Z Wang, L Wu, <strong>H Li</strong>, W Guo, D Song</small></p>
-                        <a href="https://arxiv.org/abs/2504.11703" target="_blank" class="btn btn-outline-primary btn-sm">View Paper</a>
-                    </div>
-                </div>
-                
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">FS-IDS: A framework for intrusion detection based on few-shot learning</h5>
-                        <p class="card-text"><strong>Computers & Security 2022</strong></p>
-                        <p class="card-text">A framework for intrusion detection based on few-shot learning techniques.</p>
-                        <p class="card-text"><small class="text-muted">J Yang, <strong>H Li</strong>, S Shao, F Zou, Y Wu</small></p>
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822000894" target="_blank" class="btn btn-outline-primary btn-sm">View Paper</a>
+                        <h5 class="card-title">RL and DNN for Security</h5>
+                        <ol class="mb-0">
+                            <li>
+                                Wenxuan Shi, <strong>Hongwei Li</strong>, Jiahao Yu, Xinqian Sun,
+                                Wenbo Guo, Xinyu Xing,
+                                “BandFuzz: An ML-powered Collaborative Fuzzing Framework.”,
+                                arXiv preprint arXiv:2507.10845.
+                            </li>
+                            <li>
+                                [ICSE SBFT’24] Wenxuan Shi, <strong>Hongwei Li</strong>,
+                                Jiahao Yu, Wenbo Guo, Xinyu Xing,
+                                “BandFuzz: A Practical Framework for Collaborative Fuzzing with
+                                Reinforcement Learning”, In Proceedings of the International
+                                Workshop on Search-Based and Fuzz Testing,
+                                Lisbon, Portugal, 2024.
+                            </li>
+                            <li>
+                                [Computers &amp; Security’22] Jingcheng Yang,
+                                <strong>Hongwei Li</strong>, Shuo Shao, Futai Zou, Yue Wu,
+                                “FS-IDS: A framework for intrusion detection based on
+                                few-shot learning”, Computers &amp; Security, 122:102899, 2022.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>

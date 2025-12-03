@@ -20,6 +20,7 @@
       "main",
       "meta",
       "nav",
+      "ol",
       "p",
       "script",
       "section",
@@ -31,6 +32,7 @@
       "ul"
     ],
     "classes": [
+      "align-items-center",
       "badge",
       "bg-dark",
       "bg-light",
@@ -57,8 +59,8 @@
       "col-md-8",
       "collapse",
       "container",
+      "d-flex",
       "display-4",
-      "end-0",
       "fa-3x",
       "fa-brain",
       "fa-certificate",
@@ -80,7 +82,9 @@
       "h-100",
       "hero",
       "img-fluid",
+      "justify-content-between",
       "lead",
+      "mb-0",
       "mb-1",
       "mb-2",
       "mb-3",
@@ -102,7 +106,6 @@
       "navbar-nav",
       "navbar-toggler",
       "navbar-toggler-icon",
-      "position-absolute",
       "position-relative",
       "py-4",
       "rounded",
@@ -118,8 +121,7 @@
       "text-success",
       "text-warning",
       "text-white",
-      "timeline",
-      "top-0"
+      "timeline"
     ],
     "ids": [
       "about",
