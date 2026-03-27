@@ -65,6 +65,24 @@ education:
     date_end: 2026-03-31
     summary: |
       Visiting Affiliate Researcher, Department of Computer Science, hosted by Prof. Dawn Song.
+  - area: PhD Computer Science
+    institution: Purdue University
+    date_start: 2023-09-01
+    date_end: 2024-05-31
+    summary: |
+      Ph.D. Student, Department of Computer Science, advised by Prof. Wenbo Guo.
+  - area: M.Eng. in Cybersecurity
+    institution: Shanghai Jiao Tong University
+    date_start: 2020-08-01
+    date_end: 2023-03-31
+    summary: |
+      M.Eng. in Cybersecurity, advised by Prof. Yue Wu.
+  - area: B.Eng. in Information Engineering; B.A. in French (Dual Degree)
+    institution: Shanghai Jiao Tong University
+    date_start: 2016-09-01
+    date_end: 2020-06-30
+    summary: |
+      B.Eng. in Information Engineering; B.A. in French (Dual Degree).
 
 work:
   - position: Ph.D. Student
