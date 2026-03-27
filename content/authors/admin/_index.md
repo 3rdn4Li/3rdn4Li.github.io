@@ -55,23 +55,16 @@ interests:
 education:
   - area: PhD Computer Science
     institution: University of California, Santa Barbara
-    date_start: 2020-01-01
+    date_start: 2024-09-01
     date_end: ''
     summary: |
-      Research in AI for Security (AI4Sec) under the supervision of Dr. Wenbo Guo.
-      Focus on reinforcement learning for collaborative fuzzing and LLMs for automatic patching.
-  - area: MS Computer Science
-    institution: University of California, Santa Barbara
-    date_start: 2018-01-01
-    date_end: 2020-12-31
+      Ph.D. Student, Department of Computer Science, advised by Prof. Wenbo Guo.
+  - area: Visiting Affiliate Researcher
+    institution: University of California, Berkeley
+    date_start: 2026-02-01
+    date_end: 2026-03-31
     summary: |
-      Focus on software engineering and security.
-  - area: BS Computer Science
-    institution: University of California, Santa Barbara
-    date_start: 2014-01-01
-    date_end: 2018-12-31
-    summary: |
-      Computer Science major with focus on software development.
+      Visiting Affiliate Researcher, Department of Computer Science, hosted by Prof. Dawn Song.
 
 work:
   - position: Ph.D. Student
