@@ -6,9 +6,11 @@
       "body",
       "button",
       "div",
+      "em",
       "footer",
       "h1",
       "h2",
+      "h3",
       "h5",
       "h6",
       "head",
@@ -125,12 +127,17 @@
     ],
     "ids": [
       "about",
+      "about-me",
       "awards",
       "education",
+      "fun-facts",
+      "key-achievements",
       "navbarNav",
       "publications",
       "research",
-      "sbftCertificate"
+      "research-interests",
+      "sbftCertificate",
+      "selected-publications"
     ]
   }
 }
